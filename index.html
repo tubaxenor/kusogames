@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuso Games</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Kuso Games</h1>
+        <p class="tagline">This is a TITLE</p>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <section id="game-gallery">
+          <h2>List</h2>
+          <div class="game-grid">
+
+            <article class="game-card">
+              <div class="game-thumbnail-container">
+                <img src="kuso-tai/images/thumbnail.png" alt="Rhythm Game Screenshot" class="game-thumbnail">
+              </div>
+              <div class="game-info">
+                <h3>Kuso Tai</h3>
+                <p>Inspired by Taiko no Tatsujin. Hit the notes in time with the beat! (Uses 'F' key).</p>
+                <a href="kuso-tai/" class="play-button">Play Now</a>
+              </div>
+            </article>
+
+            <!-- <article class="game-card">
+              <div class="game-thumbnail-container">
+                <img src="path/to/game2/thumbnail.jpg" alt="Game 2 Thumbnail" class="game-thumbnail">
+              </div>
+              <div class="game-info">
+                <h3>Kuso R</h3>
+                <p>A short and engaging description of your second amazing game. What makes it unique?</p>
+                <a href="path/to/game2/" class="play-button">Play Now</a>
+              </div>
+            </article>
+
+            <article class="game-card">
+              <div class="game-thumbnail-container">
+                <img src="images/placeholder-thumbnail.png" alt="Coming Soon Thumbnail" class="game-thumbnail">
+              </div>
+              <div class="game-info">
+                <h3>Project Neon</h3>
+                <p>An exciting new project currently under development. Stay tuned for updates!</p>
+                <a href="#" class="play-button disabled" aria-disabled="true">Coming Soon</a>
+              </div>
+            </article> -->
+
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; <span id="current-year"></span> Tubaxenor. All rights reserved.</p>
+        <p>
+          Find me on <a href="https://github.com/tubaxenor" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Simple script to update the current year in the footer
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

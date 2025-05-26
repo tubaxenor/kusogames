@@ -1,0 +1,69 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+#gameContainer {
+  text-align: center;
+}
+
+#gameArea {
+  width: 800px; /* Width of the note scrolling area */
+  height: 150px; /* Height of the note scrolling area */
+  background-color: #333;
+  border: 2px solid #000;
+  position: relative; /* Important for positioning notes */
+  overflow: hidden; /* Notes disappear if they go outside */
+  margin: 20px auto;
+}
+
+#target {
+  width: 60px; /* Width of the target circle */
+  height: 60px; /* Height of the target circle */
+  background-color: rgba(255, 0, 0, 0.3); /* Semi-transparent red */
+  border: 3px solid red;
+  border-radius: 50%; /* Make it a circle */
+  position: absolute;
+  left: 100px; /* Position from the left of gameArea */
+  top: 50%;
+  transform: translateY(-50%); /* Center vertically */
+  box-sizing: border-box;
+  z-index: 1; /* Target is above background, below notes if they overlap */
+}
+
+.note {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /* Circular notes */
+  position: absolute; /* Positioned relative to gameArea */
+  top: 50%;
+  transform: translateY(-50%);
+  box-sizing: border-box;
+  z-index: 2; /* Notes are above target */
+}
+
+.don { /* Example for a "Don" (center drum hit) note */
+  background-color: #ff6347; /* Tomato red */
+  border: 2px solid #c04020;
+}
+
+.ka { /* Example for a "Ka" (rim shot) note - for future use */
+  background-color: #4682b4; /* Steel blue */
+  border: 2px solid #306080;
+}
+
+#scoreDisplay {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#startButton {
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+}

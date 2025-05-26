@@ -1,0 +1,196 @@
+/* Basic Reset & Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f7f6; /* Light grayish background */
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Header Styles */
+header {
+  background: linear-gradient(to right, #56ccf2, #2f80ed); /* Nice gradient */
+  color: #fff;
+  padding: 40px 0 30px;
+  text-align: center;
+  border-bottom: 5px solid #2f80ed;
+}
+
+header h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.8em;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+header .tagline {
+  font-size: 1.1em;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+/* Main Content Styles */
+main {
+  flex-grow: 1; /* Ensures footer stays at the bottom */
+  padding: 40px 0;
+}
+
+#game-gallery h2 {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  font-size: 2.2em;
+  margin-bottom: 40px;
+  color: #2c3e50; /* Dark blue-gray */
+}
+
+/* Game Grid & Cards */
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 30px;
+}
+
+.game-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Ensures image corners are rounded with the card */
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.game-thumbnail-container {
+  width: 100%;
+  height: 200px; /* Fixed height for thumbnail consistency */
+  overflow: hidden;
+  background-color: #e0e0e0; /* Placeholder bg if image is missing */
+}
+
+.game-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image covers the area nicely */
+  display: block;
+}
+
+.game-info {
+  padding: 20px;
+  flex-grow: 1; /* Allows info to take remaining space if cards have different content heights */
+  display: flex;
+  flex-direction: column;
+}
+
+.game-info h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6em;
+  margin-bottom: 10px;
+  color: #34495e; /* Slightly softer dark blue */
+}
+
+.game-info p {
+  font-size: 0.95em;
+  margin-bottom: 20px;
+  color: #555;
+  flex-grow: 1; /* Pushes button to the bottom */
+}
+
+.play-button {
+  display: inline-block;
+  background-color: #2f80ed;
+  color: #fff;
+  padding: 12px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 700;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: auto; /* Pushes button to bottom of card if content is short */
+}
+
+.play-button:hover {
+  background-color: #2568c3;
+  transform: scale(1.03);
+}
+
+.play-button.disabled {
+  background-color: #bdc3c7; /* Gray for disabled */
+  color: #7f8c8d;
+  cursor: not-allowed;
+}
+
+.play-button.disabled:hover {
+  background-color: #bdc3c7;
+  transform: none;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #2c3e50; /* Dark footer */
+  color: #ecf0f1;
+  text-align: center;
+  padding: 25px 0;
+  margin-top: auto; /* Ensures footer is at bottom if content is short */
+}
+
+footer p {
+  margin-bottom: 8px;
+  font-size: 0.9em;
+}
+
+footer a {
+  color: #56ccf2; /* Light blue for links in footer */
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  header h1 {
+      font-size: 2.2em;
+  }
+  header .tagline {
+      font-size: 1em;
+  }
+  #game-gallery h2 {
+      font-size: 1.8em;
+  }
+  .game-info h3 {
+      font-size: 1.4em;
+  }
+}
+
+@media (max-width: 480px) {
+  .game-grid {
+      grid-template-columns: 1fr; /* Single column on very small screens */
+  }
+   header h1 {
+      font-size: 1.8em;
+  }
+  header .tagline {
+      font-size: 0.9em;
+  }
+}
